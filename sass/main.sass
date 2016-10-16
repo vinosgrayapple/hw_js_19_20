@@ -1,3 +1,6 @@
+*
+	margin: 0
+	padding: 0
 @import "bourbon"
 @import "vars.sass"
 
@@ -72,9 +75,11 @@ body textarea:required:valid
 	// width: 1160px
 	height: 56px
 	background-color: #292d32 
+	position: relative
 	ul
 		list-style: none
-		padding: 0
+		position: absolute
+		
 		li
 			display: inline-block
 			font-size: 14px
@@ -92,5 +97,19 @@ body textarea:required:valid
 					color: #FFF 
 				&:hover
 					color: #f3b50d 
+.header__nav__box
+	position: absolute
+	right: 7px
+	top: 7px
+	input
+		height: 38px
+		width: 239px
+		border: 1px solid #17191d
+		background-color: rgba(255,255,255,.05)  
+	a
+		position: absolute
+		right: 12px
+		top: 6px
+		// margin-left: -12px
 //ALWAYS END
 @import "media"
