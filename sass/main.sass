@@ -37,7 +37,7 @@ body textarea:required:valid
 .main
 	width: 1160px
 	margin: 0 auto
-	border: 1px solid 
+	// border: 1px solid 
 .header__top
 	// width: 110px
 	display: block
@@ -72,7 +72,7 @@ body textarea:required:valid
 					color: $active-color 
 					
 .header__nav
-	// width: 1160px
+	margin-bottom: 40px
 	height: 56px
 	background-color: #292d32 
 	position: relative
@@ -110,6 +110,232 @@ body textarea:required:valid
 		position: absolute
 		right: 12px
 		top: 6px
-		// margin-left: -12px
+		color: #5d6063 
+
+.header__nav__box input[placeholder] 
+	opacity: 0.85
+	color: white
+	font-family: Arial
+	font-size: 13px
+	font-weight: 400
+	line-height: 20px
+	text-indent: 15px
+.slider
+	margin-bottom: 72px
+.features 
+	overflow: hidden
+	margin-bottom: 85px
+
+.features__left,
+.features__middle, 
+.features__right 
+	float: left
+	width: 33.3333%  
+	// padding-right: 40px
+.features__left__item
+	overflow: hidden
+.features__left__item .__left,
+.features__middle__item .__left,
+.features__right__item .__left
+	// width: 25%
+	float: left
+.features__left__item .__right,
+.features__middle__item .__right,
+.features__right__item .__right
+	float: right
+	width: 70%
+	padding-left: 2px
+	padding-right: 40px
+	// border: 1px solid 
+.features__left__item .__right h1,
+.features__middle__item .__right h1,
+.features__right__item .__right h1
+	color: #2a2b2e
+	font-family: Ubuntu
+	font-size: 20px
+	font-weight: 600
+	line-height: 20px
+	margin-bottom: 27px
+.features__left__item .__right h2,
+.features__middle__item .__right h2,
+.features__right__item .__right h2
+	color: #2a2b2e
+	font-family: Ubuntu
+	font-size: 13px
+	font-weight: 600
+	line-height: 20px
+.features__left__item .__right h2 a,
+.features__middle__item .__right h2 a,
+.features__right__item .__right h2 a
+	text-decoration: none
+	color: #2a2b2e 
+.features__left__item .__right h2 a i,
+.features__middle__item .__right h2 a i,
+.features__right__item .__right h2 a i
+	color: #248cec 
+	
+.features__left__item .__right h2 a:hover,
+.features__middle__item .__right h2 a:hover,
+.features__right__item .__right h2 a:hover
+	color: #248cec 
+.features__left__item .__right h2 a:hover i,
+.features__middle__item .__right h2 a:hover i,
+.features__right__item .__right h2 a:hover i
+	color: #989fb3 
+
+.features__left__item .__right p,
+.features__middle__item .__right p,
+.features__right__item .__right p
+	color: #8a8a8a
+	font-family: Arial
+	font-size: 13px
+	font-weight: 400
+	line-height: 20px
+	margin-bottom: 23px
+.features__left__item .__right .img,
+.features__middle__item .__right .img,
+.features__right__item .__right .img
+	height: 32px
+	margin-bottom: 17px
+.features__left__item .__right .img
+	background: url(../img/settings.png) no-repeat
+.features__middle__item .__right .img
+	background: url(../img/params.png) no-repeat
+.features__right__item .__right .img
+	background: url(../img/truck.png) no-repeat
+
+.services 
+	height: 500px
+	width: 100%
+	background-color: #2a2d32
+.services__h1
+	color: white
+	font-family: Ubuntu
+	font-size: 24px
+	font-weight: 500
+	line-height: 20px
+	padding-top: 47px
+	margin: 0
+	margin-bottom: 55px
+.services__block
+	overflow: hidden
+.block
+	&:hover .services__block__h3
+		color: #f4b60d
+.services__block .block 
+	float: left
+	width: 25%
+.services__block .block img
+	position: relative
+	display: compact
+.tizer
+	width: 260px
+	height: 260px
+	position: relative
+	margin-bottom: 33px
+	&:hover
+		&::before
+			position: absolute
+			z-index: 10
+			content: ""
+			display: block
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
+			background-color: #248cec
+			opacity: 0.9
+			-webkit-background-size: cover 
+			-o-background-size: cover 
+			background-size: cover 
+			font-size: 25px
+	a
+		z-index: 20
+		display: block
+		width: 100%
+		height: 100%
+	.plus
+		position: absolute
+		background-image: url(../img/plus.png) 
+		display: none
+		width: 35px
+		height: 35px
+		// background: green 
+		z-index: 12
+		top: 50%
+		left: 50%
+		margin: -18px 0 0 -18px
+	&:hover .plus
+		display: block
+	&:hover .services__block__h3
+		color: #f4b60d
+.services__block .block img:hover::before 
+	
+
+.services__block__h3
+	display: block
+	text-align: center
+	padding-right: 30px
+	color: white
+	font-family: Ubuntu
+	font-size: 16px
+	font-weight: 500
+	line-height: 20px
+	
+.news
+	height: 545px
+	padding-top: 65px
+	background: #f7f7f7 
+.news__box
+	overflow: hidden
+
+.news__left
+	width: 51%
+.news__right
+	width: 49%
+
+.news__left, .news__right 
+	float: left
+
+.news__left h1, .news__right h1
+	display: block
+	color: #2a2d32
+	font-family: Ubuntu
+	font-size: 24px
+	font-weight: 500
+	line-height: 20px
+	margin-bottom: 50px
+
+.news__left__bottom 
+	padding-top: 30px
+.news__left .img__block 
+	display: inline-block
+	position: relative
+
+
+.data__block 
+	width: 40px
+	height: 80px
+	position: absolute
+	top: 0
+	left: 0
+.data__block__top, .data__block__bottom 
+	height: 40px
+	text-align: center
+	line-height: 40px
+	font-family: Ubuntu
+	font-size: 15px
+	font-weight: 500
+	// position: absolute
+.data__block__top
+	background: #248cec
+	color: white
+.data__block__bottom
+	background: #f4b60d 
+	color: #2a2b2e
+	font-size: 18px
+
+
+
 //ALWAYS END
 @import "media"

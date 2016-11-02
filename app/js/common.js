@@ -301,12 +301,13 @@ var jsonString = [
     "_id": "56bdc3396fdbaec5ee4ca929"
   }
 ];
-/*console.log(jsonString);
-var arrayData = JSON.parse(jsonString);*/
+
 /*1. Массив скиллов (поле skills) всех людей, не должно быть повторяющихся скиллов, так же они должны быть отсортированы по алфавиту; */
-console.log('Unique skills => ',_.sortBy(_.map(_.uniq(_.flatten(_.map(jsonString,'skills'))),function lowerCase(n) { return n.toLowerCase()})).toString());
+console.log('1) Unique skills => ',_.sortBy(_.map(_.uniq(_.flatten(_.map(jsonString,'skills'))),function lowerCase(n) { return n.toLowerCase()})).toString());
 
 /*2. Массив имен (поле name) людей, отсортированных в зависимости от количества их друзей (friends); */
-
+console.log('2) Name sort by friends => ', _.map(_.sortBy(jsonString, [function(o) { return _.map(o.friends,'id').length }]),'name').toString());
 
 /*3. Массив всех друзей всех пользователей, не должно быть повторяющихся людей*/
+
+console.log('3) Unique friends =>',_.uniq(_.flatten(_.map(_.map(jsonString, 'friends'),function(o){ return _.map(o, 'name')}))).toString());
