@@ -55,8 +55,6 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
 	};
 })(jQuery);
 
-
-/*coinSlider*/
 /**
  * Coin Slider - Unique jQuery Image Slider
  * @version: 1.0 - (2010/04/04)
@@ -108,6 +106,3 @@ $.straight=function(el){counter=0;for(i=1;i<=params[el.id].sph;i++){for(j=1;j<=p
 $.min=function(n,m){if(n>m)return m;else return n;}
 $.max=function(n,m){if(n<m)return m;else return n;}
 this.each(function(){init(this);});};$.fn.coinslider.defaults={width:565,height:290,spw:7,sph:5,delay:3000,sDelay:30,opacity:0.7,titleSpeed:500,effect:'',navigation:true,links:true,hoverPause:true};})(jQuery);
-
-
-/*coinSlider*/
