@@ -311,3 +311,30 @@ console.log('2) Name sort by friends => ', _.map(_.sortBy(jsonString, [function(
 /*3. Массив всех друзей всех пользователей, не должно быть повторяющихся людей*/
 
 console.log('3) Unique friends =>',_.uniq(_.flatten(_.map(_.map(jsonString, 'friends'),function(o){ return _.map(o, 'name')}))).toString());
+
+
+
+
+// $( function() {
+//     $( "#accordion" ).accordion();
+//   } );
+
+
+ /*  Initial SLIDER*/
+ $(document).ready(function() {
+    $('#coin-slider').coinslider({ width: 1160, height:470, navigation: true, delay: 3000, links : false });
+  });
+
+/* Accordion */
+   
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+  }
+}
+
+   /* Accordion */

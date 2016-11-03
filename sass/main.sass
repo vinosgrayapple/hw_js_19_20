@@ -30,6 +30,43 @@ body input:required:valid,
 body textarea:required:valid
 	color: #666
 
+.coin-slider
+  overflow: hidden
+  zoom: 1
+  position: relative
+  a
+    text-decoration: none
+    outline: none
+    border: none
+
+.cs-buttons
+  font-size: 0px
+  padding: 10px
+  float: left
+  a
+    margin-left: 5px
+    height: 10px
+    width: 10px
+    float: left
+    border: 1px solid #B8C4CF
+    color: #B8C4CF
+    text-indent: -1000px
+
+.cs-active
+  background-color: #B8C4CF
+  color: #FFFFFF
+
+.cs-title
+  width: 545px
+  padding: 10px
+  background-color: #000000
+  color: #FFFFFF
+
+.cs-prev, .cs-next
+  background-color: #000000
+  color: #FFFFFF
+  padding: 0px 10px
+  
 //Custom Styles Here
 // .main
 // 	width: 192px
@@ -120,8 +157,56 @@ body textarea:required:valid
 	font-weight: 400
 	line-height: 20px
 	text-indent: 15px
-.slider
+.slider__box
 	margin-bottom: 72px
+	height: 470px
+	overflow: hidden
+.ui-draggable, .ui-droppable 
+	background-position: top
+
+
+#sm_slider
+  z-index: 40
+  width: 1160px
+  height: 740px
+  overflow: hidden
+  margin: 0 0 7px
+  position: relative
+  ul, li
+    padding: 0
+    margin: 0
+    list-style-type: none
+  ul
+    width: 9999px
+    li
+      list-style-type: none
+      float: left
+      width: 700px
+      height: 290px
+  .nav
+    position: absolute
+    left: 15px
+    bottom: 12px
+    span
+      opacity: 0.9
+      background: #fff
+      margin: 0 8px 0 0
+      width: 16px
+      height: 16px
+      border-radius: 8px
+      cursor: pointer
+      overflow: hidden
+      display: block
+      float: left
+      box-shadow: 0 1px 2px #000
+      &.on
+        background: #2e9419
+        
+
+
+
+
+
 .features 
 	overflow: hidden
 	margin-bottom: 85px
@@ -286,8 +371,9 @@ body textarea:required:valid
 	height: 545px
 	padding-top: 65px
 	background: #f7f7f7 
-.news__box
 	overflow: hidden
+.news__box
+	// overflow: hidden
 
 .news__left
 	width: 51%
@@ -308,17 +394,23 @@ body textarea:required:valid
 
 .news__left__bottom 
 	padding-top: 30px
-.news__left .img__block 
+	
+.news__left
+	// position: relative
+
+.img__block 
 	display: inline-block
 	position: relative
+	z-index: 30
+	
 
 
 .data__block 
 	width: 40px
 	height: 80px
 	position: absolute
-	top: 0
-	left: 0
+	top: 14px
+	left: -17px
 .data__block__top, .data__block__bottom 
 	height: 40px
 	text-align: center
@@ -334,8 +426,165 @@ body textarea:required:valid
 	background: #f4b60d 
 	color: #2a2b2e
 	font-size: 18px
+.news__text__block
+	width: 70%
+	float: right
+.news__text__block
+	padding-left: 12px
+	h1
+		display: inline-block
+		color: #2a2d32
+		font-family: Ubuntu
+		font-size: 16px
+		font-weight: 500
+		line-height: 20px
+		margin:  0
+		&:hover
+			color: #248cec
+	.comments
+		color: #9e9e9e
+		font-family: Arial
+		font-size: 13px
+		font-weight: 400
+		line-height: 20px
+		&a
+			color: #0187f4
+	.news__begin
+		color: #8a8a8a
+		font-family: Arial
+		font-size: 13px
+		font-weight: 400
+		line-height: 20px
+		padding-right: 40px
+		padding-top: 27px
+.accordion 
+	color: #2a2d32
+	font-family: Ubuntu
+	font-size: 13px
+	font-weight: 500
+	line-height: 20px
+	text-transform: uppercase
+	width: 100%
+	height: 39px
+	border: none
+	background-color: white
+	border: 1px solid #e8e8e8
+	transition: 0.4s
+	cursor: pointer
+	position: relative
+	text-align: left
+	padding-left: 55px
+	&:before
+		content: '\f067'
+		text-align: center
+		line-height: 38px
+		font-family: "FontAwesome"
+		display: block
+		position: absolute
+		top: 0
+		left: 0
+		width: 39px
+		height: 38px
+		background-color: transparent
+.active,
+.accordion:hover
+	background-color: #f4b60d
+	color: #FFF 
+.active
+	&:before
+		 content: "\f068"
+.panel 
+	color: #8a8a8a
+	font-family: Arial
+	font-size: 13px
+	font-weight: 400
+	line-height: 20px
+	padding: 25px 0 40px 40px
+	background-color: white
+	overflow: hidden
+  max-height: 500px
+	display: none
+	transition: 0.6s ease-in-out
 
+.show
+	display: block
+.trademark 
+	height: 240px
+	overflow: hidden
+.trademark__box
+	float: left
+	width: calc(100%/6)
+	height: 240px
+	&:nth-child(1)
+		background: url(../img/rbp.png) no-repeat center center
+	&:nth-child(2)
+			background: url(../img/motoMetal.png) no-repeat center center 
+	&:nth-child(3)
+			background: url(../img/2Crave.png) no-repeat center center 
+	&:nth-child(4)
+			background: url(../img/ATXSeries.png) no-repeat center center 
+	&:nth-child(5)
+			background: url(../img/Cruiser.png) no-repeat center center 
+	&:nth-child(6)
+			background: url(../img/GEAR.png) no-repeat center center
+	a
+		display: block
+		width: 100%
+		height: 100%
 
-
+.navigation
+	height: 328px
+	background-color: #2a2d32
+	padding-top: 65px
+.navigation_boxes
+	overflow: hidden
+.navigation__box
+	float: left
+	width: calc(100%/4)
+	ul
+		list-style: none
+		margin-right: 40px
+		li
+			border-bottom: 1px solid #393C40 
+			padding: 0 5px
+			&:last-child
+				border-bottom: 1px solid transparent
+			a
+				text-decoration: none
+				color: #828385
+				// opacity: 0.4
+				font-family: Arial
+				font-size: 13px
+				font-weight: 300
+				line-height: 36px
+				&:hover
+					color: #248cec
+					opacity: 1
+				
+.navigation__box__h1
+	margin: 0
+	color: #FFF 
+	font-family: Ubuntu
+	font-size: 16px
+	font-weight: 500
+	line-height: 24px
+	text-transform: uppercase 
+	margin-bottom: 40px
+	
+footer
+	height: 60px
+	background-color: #35383c 
+	font-family: Arial
+	font-size: 14px
+	font-weight: 400
+	line-height: 60px
+	text-align: center
+	.foot
+		margin-right: 100px
+		a
+			text-decoration: none
+			color: #5D6063 
+			&:hover
+				color: #248cec
 //ALWAYS END
 @import "media"
